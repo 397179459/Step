@@ -138,7 +138,7 @@ def push_wx_Server(msg):
     key = 'SCT154889TvJUR8fDeXE09eVCchKeFLUR5'
     title= '============= Step =============\n' + msg #改成你要的标题内容
     url = 'https://sc.ftqq.com/%s.send' % key
-    requests.post(url, data={'text': title, 'desp': msg})
+    requests.post(url, data={'text': msg, 'desp': msg})
 
 def main_handler():
 # def main_handler(event, context):
