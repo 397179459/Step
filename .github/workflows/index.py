@@ -133,7 +133,12 @@ def push_wx(msg):
     # content = '[{0}] 同步成功 [{1}]'.format(uid, ustep) #改成你要的正文内容
     url = 'http://pushplus.hxtrip.com/send?token=' + token + '&title=' + title + '&content=' + msg
     requests.get(url)
-
+    
+def push_wx_Server(msg):
+    key = 'SCT154889TvJUR8fDeXE09eVCchKeFLUR5'
+    title= '============= Step =============' #改成你要的标题内容
+    url = 'https://sc.ftqq.com/%s.send' % key
+    requests.post(url, data={'text': title, 'desp': msg})
 
 def main_handler():
 # def main_handler(event, context):
@@ -162,6 +167,7 @@ def main_handler():
         ret = main(dic1[uid], dic1[upwd], dic1[ustep])
         pushMsg += ret
         print(ret)
+    push_wx_Server(pushMsg)
 #     push_wx(pushMsg)
 
 main_handler()
