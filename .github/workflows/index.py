@@ -161,4 +161,5 @@ def main_handler(event, context):
         # print(dic1[uid], dic1[upwd], dic1[ustep])
         ret = main(dic1[uid], dic1[upwd], dic1[ustep])
         pushMsg += ret
-    push_wx(pushMsg)
+        print(ret)
+#     push_wx(pushMsg)
