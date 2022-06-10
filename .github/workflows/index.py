@@ -135,8 +135,8 @@ def push_wx(msg):
     requests.get(url)
 
 
-# def main_handler():
-def main_handler(event, context):
+def main_handler():
+# def main_handler(event, context):
     # print("Received event: " + json.dumps(event, indent = 2)) 
     # print("Received context: " + str(context))
     # print("开始运行")
@@ -163,3 +163,5 @@ def main_handler(event, context):
         pushMsg += ret
         print(ret)
 #     push_wx(pushMsg)
+
+main_handler()
