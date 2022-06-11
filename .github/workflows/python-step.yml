@@ -6,8 +6,8 @@ name: Python application-MiStep
 on:
   schedule:
     - cron: '52 6 * * *'
-#   push:
-#     branches: [ main ]
+  push:
+    branches: [ main ]
 
 permissions:
   contents: read
