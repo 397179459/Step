@@ -5,7 +5,7 @@ name: Python application-MiStep
 
 on:
   schedule:
-    - cron: '52 6 * * *'
+    - cron: '47 22 * * *'
   push:
     branches: [ main ]
 
